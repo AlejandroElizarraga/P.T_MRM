@@ -9,5 +9,6 @@ class PostApiViewSet(ModelViewSet):
 
 def genIp(request):
     ipl=Post.objects.get()
-    iplg= '.'.join(ipl)
+    ipls=str(ipl)
+    iplg= '.'.join(ipls)
     return HttpResponse(iplg)
